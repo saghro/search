@@ -17,7 +17,7 @@
     <div class="container col-6 mt-5">
         <input type="text" class="form-control mb p-3 " placeholder="cherche ici...." id="chrch">
     </div>
-    <table class="table">
+    <table id="table">
         <tr class="info">
             <th class="info" data-colname="name" data-order>Name</th>
             <th data-colname="age" data-order="desc">Age</th>
@@ -29,24 +29,23 @@
         var data = [{
             name: "michlan",
             age: 25,
-            birthdate: 11 / 10 / 2000;
+            birthdate: "11 - 10 - 2000"
 
         }, {
             name: "michlan2",
             age: 22,
-            birthdate: 11 / 10 / 1992;
+            birthdate: "11 - 10 - 1992"
 
         }, {
             name: "michlan3",
             age: 23,
-            birthdate: 11 / 10 / 2000;
+            birthdate: "11 / 10 / 2000"
 
         }]
         for (var i of data) {
             var el = document.createElement('tr');
-            el.innerHTML = "<td>" + i.id + "</td><td>" + i.age + "</td><td>" + i.name + "</td>"
-
-            document.getElementsByClassName('').appendChild(el);
+            el.innerHTML = "<td>" + i.birthdate + "</td><td>" + i.age + "</td><td>" + i.name + "</td>";
+            document.getElementById("table").appendChild(el);
         }
     </script>
 </body>
